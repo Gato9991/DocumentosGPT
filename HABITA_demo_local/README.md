@@ -1,29 +1,26 @@
-# HABITA � demo local
+# HABITA � prototipo local de entorno y movilidad
 
-Mini sitio interactivo basado en las capturas: selecci�n de direcci�n, resultado e �ndice HABITA, y detalle del entorno con vista de d�a y de noche.
-
-## Iniciar en localhost
-
-Desde esta carpeta, ejecuta uno de estos comandos:
+Demo de presentaci�n, autocontenida en `index.html`. Puedes abrir ese archivo con doble clic. Para servirla en localhost desde esta carpeta:
 
 ```powershell
-py -m http.server 8000
+python -m http.server 8000
 ```
 
-Si `py` no est� disponible, prueba `python -m http.server 8000`. Luego abre [http://localhost:8000](http://localhost:8000). Para detener el servidor, pulsa `Ctrl+C` en la terminal.
+Luego visita [http://localhost:8000](http://localhost:8000). Det�n el servidor con `Ctrl+C`. No requiere paquetes, API ni conexi�n para funcionar; los enlaces externos s� necesitan internet.
 
-Tambi�n puedes abrir `index.html` directamente, pero localhost reproduce mejor el uso previsto. No requiere instalaci�n de paquetes ni conexi�n a internet para funcionar. Los enlaces a las fuentes oficiales s� necesitan internet.
+## Qu� se puede hacer
 
-## Alcance
+- Alternar entre **Plaza de Armas de San Bernardo** y **Estadio Nacional**.
+- Cambiar el radio de **500/800 m** y la hora punta **07-09/17-19 h**. Todas las cifras de movilidad y la comparaci�n responden a esos controles.
+- Ver densidad de paradas, recorridos, viajes �nicos programados, eventos de paso y parada activa m�s pr�xima.
+- Cambiar el escenario ilustrativo de d�a/noche del �ndice HABITA.
+- Abrir la ubicaci�n geogr�fica y desplegar las limitaciones metodol�gicas.
 
-- Tres direcciones reales de lugares p�blicos, con enlace a la fuente oficial en el resultado.
-- B�squeda local limitada a esas opciones. No se geocodifican direcciones libres.
-- Puntajes, variables, fortalezas y advertencias **inventados** para demostrar la navegaci�n. No son mediciones ni datos para tomar una decisi�n inmobiliaria.
-- Sin cuenta, servidor de datos, sensores, seguimiento ni almacenamiento de informaci�n.
+## Procedencia
 
-### Fuentes de las direcciones
+Los datos de movilidad salen de los JSON `analysis_Plaza_de_Armas_-_San_Bernardo_2026-09-23_v1_2_1.json` y `analysis_Estadio_Nacional_Julio_Mart�nez_Pr�danos_2026-09-23_v1_2_1.json` incluidos en [HABITA_GTFS_Movilidad_v1_2_1.zip](https://github.com/Gato9991/DocumentosGPT/blob/main/HABITA_GTFS_Movilidad_v1_2_1.zip). El feed es `V167.20260829` y la fecha analizada es el **23 de septiembre de 2026**. Las ubicaciones se representan con las coordenadas de los reportes; el recinto Estadio Nacional tiene direcci�n p�blica [Av. Grecia 2001, �u�oa](https://ind.cl/noticias/las-claves-de-la-corrida-de-la-ninez-en-el-parque-estadio-nacional/).
 
-- Municipalidad de Providencia: [Av. Pedro de Valdivia 963](https://www.providencia.cl/provi/municipalidad/direcciones-municipales/administracion-municipal/direccion-administracion-municipal).
-- Centro Cultural Gabriela Mistral: [Av. Libertador Bernardo O'Higgins 227](https://gam.cl/es/experiencia/como-llegar/).
-- Museo de la Memoria y los Derechos Humanos: [Matucana 501](https://educamemoria.museodelamemoria.cl/taller-visita/obras-exteriores-del-museo/).
+El �ndice HABITA /100, ambiente, ruido, seguridad y las categor�as de densidad **son una demostraci�n**. Los valores /100 son enteramente ficticios. La etiqueta de densidad usa puntos de parada realmente contados, pero sus umbrales son una regla provisional, no un est�ndar validado. [DATOS_Y_SUPUESTOS.md](DATOS_Y_SUPUESTOS.md) contiene la tabla completa y las reglas.
+
+**No interpretar eventos de paso como buses distintos:** un mismo viaje puede pasar por varias paradas del radio. El indicador principal de intensidad son los viajes �nicos programados. Las distancias son geod�sicas, no recorridos a pie. El GTFS es horario programado, no tiempo real.
 
