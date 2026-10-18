@@ -1,0 +1,27 @@
+PALACIO_LA_MONEDA = (-33.4422475, -70.653898)
+
+COSTANERA_CENTER = (-33.4173748, -70.6072617)
+
+ESTADIO_NACIONAL = (-33.4644994, -70.6112756)
+
+AEROPUERTO_SANTIAGO = (-33.3972119, -70.7930097)
+
+CERRO_SAN_CRISTOBAL_PIO_NONO = (-33.4304869, -70.6353589)
+
+HOSPITAL_SOTERO_DEL_RIO = (-33.5770095, -70.5812289)
+
+INTERMODAL_LA_CISTERNA = (-33.5382168, -70.6641985)
+
+OBSERVATORIO_CERRO_CALAN = (-33.3964895, -70.5370203)
+
+
+UBICACIONES = {
+    "Palacio de La Moneda": PALACIO_LA_MONEDA,
+    "Costanera Center (Cenco Costanera)": COSTANERA_CENTER,
+    "Estadio Nacional Julio Martínez Prádanos": ESTADIO_NACIONAL,
+    "Aeropuerto Internacional Arturo Merino Benítez": AEROPUERTO_SANTIAGO,
+    "Cerro San Cristóbal — acceso Pío Nono": CERRO_SAN_CRISTOBAL_PIO_NONO,
+    "Hospital Dr. Sótero del Río": HOSPITAL_SOTERO_DEL_RIO,
+    "Estación Intermodal La Cisterna": INTERMODAL_LA_CISTERNA,
+    "Observatorio Astronómico Nacional — Cerro Calán": OBSERVATORIO_CERRO_CALAN,
+}
